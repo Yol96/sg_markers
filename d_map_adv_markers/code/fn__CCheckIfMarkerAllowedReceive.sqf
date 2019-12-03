@@ -37,7 +37,11 @@ if (_targ != TFAR_currentUnit) then {
 			//Если оглох, то "слышимость" меток понижается 
 			_d = _d * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);
 
-			if(_d > _tf_range) exitWith { false };
+			//if(_d > _tf_range) exitWith { false };
+			
+			{
+				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
+			} forEach playableUnits; // +select side??
 
 
 			private _tf_isMatch= {
