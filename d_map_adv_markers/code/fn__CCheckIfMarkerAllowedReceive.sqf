@@ -9,7 +9,7 @@ params ["_mark", "_targ"];
 
 if (_targ != TFAR_currentUnit) then {
 
-	if (d_restr_enable_freeze) then {
+	if (d_restr_enable_freeze) then { // Если фриз закончился то ... 
 		private _data = _mark select 11;
 		private _tf_voice_volume_meters = (_data select 4) * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);		
 		private _tf_ok = false;
