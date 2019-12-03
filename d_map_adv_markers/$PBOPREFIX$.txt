@@ -1,0 +1,6 @@
+///////<HEADER>///////
+prefix=xx\addons\d_map_adv_markers
+Mikero=DePbo.dll
+Pbo Type is: Arma Addon
+Sha: '4CDECA50988DCC2899D401C32774165CA288850E'
+//////</HEADER>//////

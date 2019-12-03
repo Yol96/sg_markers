@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project name="d_map_adv_markers">
+  <Package name="strings">
+
+
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__IMD_Description">
+		<Original>Description:</Original>
+		<Russian>Описание:</Russian>
+	</Key> 
+	
+
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__opt_always_off">
+		<Original>Always don't show</Original>
+		<Russian>Никогда не отображать</Russian>
+	</Key> 
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__opt_off">
+		<Original>Don't show by default</Original>
+		<Russian>Не отображать по-умолчанию</Russian>
+	</Key> 
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__opt_on">
+		<Original>Show by default</Original>
+		<Russian>Отображать по-умолчанию</Russian>
+	</Key> 
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__opt_always_on">
+		<Original>Always show</Original>
+		<Russian>Всегда отображать</Russian>
+	</Key> 
+
+
+
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__uac_section">
+		<Original>Map Advanced Markers</Original>
+		<Russian>Маркеры на карте</Russian>
+	</Key> 
+	
+	
+	<Key ID="STR_Addons__d_map_adv_markers__uac_MarkerTagNameVisibility">
+		<Original>Visibility of marker creator's name</Original>
+		<Russian>Отображение имени создателя маркера</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__uac_MarkerTagChannelVisibility">
+		<Original>Visibility of marker channel</Original>
+		<Russian>Отображение канала маркера</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__uac_MarkerTagDaytimeVisibility">
+		<Original>Visibility of marker creation time</Original>
+		<Russian>Отображение времени создания маркера</Russian>
+	</Key> 
+
+		 
+	<Key ID="STR_Addons__d_map_adv_markers__uac_LineMarkerTagNameVisibility">
+		<Original>Visibility of line marker creator's name</Original>
+		<Russian>Отображение имени создателя линейного маркера</Russian>
+	</Key> 
+		 
+	<Key ID="STR_Addons__d_map_adv_markers__uac_LineMarkerTagChannelVisibility">
+		<Original>Visibility of line marker channel</Original>
+		<Russian>Отображение канала линейного маркера</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__uac_LineMarkerTagDaytimeVisibility">
+		<Original>Visibility of line marker creation time</Original>
+		<Russian>Отображение времени создания линейного маркера</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__uac_ActivateAltTagVisKey">
+		<Original>Modifier-key of alternate marker tags visibility mode</Original>
+		<Russian>Кнопка отображения подписи маркеров</Russian>
+	</Key> 
+
+
+	<Key ID="STR_Addons__d_map_adv_markers__uac_ModForLineMarkers">
+		<Original>Modifier-key for placing line marker</Original>
+		<Russian>Кнопка для рисования линий</Russian>
+	</Key> 
+
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_grou_chan">
+		<Original>SW radio is required to send marker to group channel</Original>
+		<Russian>Для отправки маркера на канал группы необходима КВ рация</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_side_chan">
+		<Original>LR radio is required to send marker to side channel</Original>
+		<Russian>Для отправки маркера на канал стороны необходима ДВ рация</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_comm_chan">
+		<Original>LR radio is required to send marker to command channel</Original>
+		<Russian>Для отправки маркера на командный канал необходима ДВ или КВ рация с настроенным допканалом</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_glob_chan">
+		<Original>Sending markers to global channel is forbidden</Original>
+		<Russian>Отправка маркеров на общий канал запрещена</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_cant_use_radio">
+		<Original>Sending markers not available when you can't use radio</Original>
+		<Russian>Для отправки маркера необходима работающая рация</Russian>
+	</Key> 
+
+
+
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__global">
+		<Original>Send marker to GLOBAL channel</Original>
+		<Russian>Отправить маркер на ГЛОБАЛЬНЫЙ канал</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__side">
+		<Original>Send marker to SIDE channel</Original>
+		<Russian>Отправить маркер на канал СТОРОНЫ</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__command">
+		<Original>Send marker to COMMAND channel</Original>
+		<Russian>Отправить маркер на КОМАНДНЫЙ канал</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__group">
+		<Original>Send marker to GROUP channel</Original>
+		<Russian>Отправить маркер на канал ГРУППЫ</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__vehicle">
+		<Original>Send marker to VEHICLE channel</Original>
+		<Russian>Отправить маркер на канал ТЕХНИКИ</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__btn_send_to_chan__direct">
+		<Original>Send marker to DIRECT channel</Original>
+		<Russian>Отправить маркер на ПРЯМОЙ канал</Russian>
+	</Key> 
+
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_visibility_name">
+		<Original>Who may see markers</Original>
+		<Russian>Кто может видеть маркеры</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_visibility_desc">
+		<Original>Who may see markers</Original>
+		<Russian>Кто может видеть маркеры</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_visibility_value_side">
+		<Original>Side</Original>
+		<Russian>Сторона</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_visibility_value_friendly">
+		<Original>Side and Friendly</Original>
+		<Russian>Сторона и дружественные</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_visibility_value_all">
+		<Original>All</Original>
+		<Russian>Все</Russian>
+	</Key> 
+
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_ability_name">
+		<Original>Can send markers</Original>
+		<Russian>Кто может ставить маркеры</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_ability_desc">
+		<Original>Who may send markers by radio</Original>
+		<Russian>Кто может ставить маркеры по рации</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_ability_value_all">
+		<Original>All</Original>
+		<Russian>Все</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_ability_value_lr">
+		<Original>Only LR</Original>
+		<Russian>Только ДВ</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__mod_setting_ability_value_none">
+		<Original>None</Original>
+		<Russian>Никто</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_noLR">
+		<Original>You have no LR radio</Original>
+		<Russian>Нет ДВ для отправки маркеров</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_SW">
+		<Original>Can't send marker to SW</Original>
+		<Russian>Нельзя отправить маркер по КВ</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__send_not_allowed_all">
+		<Original>Can't send markers by radio</Original>
+		<Russian>Нельзя ставить маркеры по рации</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__lines">
+		<Original>Line markers only allowed direct or vehicle channel</Original>
+		<Russian>Линии можно рисовать в канал техники или прямой</Russian>
+	</Key> 
+
+	<Key ID="STR_Addons__d_map_adv_markers__restriction">
+		<Original>Restrict markers after freeze time</Original>
+		<Russian>Ограничить маркеры после фризтайма</Russian>
+	</Key> 
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__Subject">
+		<Original>Markers</Original>
+		<Russian>Маркеры</Russian>
+	</Key> 
+	
+ 	<Key ID="STR_Addons__d_map_adv_markers__Persistent">
+		<Original>Persistent markers</Original>
+		<Russian>Постоянные маркеры</Russian>
+	</Key> 
+ 	<Key ID="STR_Addons__d_map_adv_markers__Saved">
+		<Original>Saved markers</Original>
+		<Russian>Сохраненные маркеры</Russian>
+	</Key> 
+	
+ 	<Key ID="STR_Addons__d_map_adv_markers__MarkersSaved">
+		<Original>Markers for %2 (%1) saved to your profile</Original>
+		<Russian>Маркеры для %2 (%1) сохранены в профиле</Russian>		
+	</Key>  	
+	
+	<Key ID="STR_Addons__d_map_adv_markers__MarkersLoaded">
+		<Original>Markers for %2 (%1) loaded</Original>
+		<Russian>Маркеры для %2 (%1) загружены</Russian>
+	</Key> 
+	<Key ID="STR_Addons__d_map_adv_markers__MarkersDeleted">
+		<Original>Markers #%3 for %2 (%1) deleted</Original>
+		<Russian>Маркеры №%3 для %2 (%1) удалены из профиля</Russian>
+	</Key> 
+
+ 	<Key ID="STR_Addons__d_map_adv_markers__Save">
+		<Original>Save markers to profile</Original>
+		<Russian>Сохранить маркеры в профиле</Russian>
+	</Key> 
+	
+ 	<Key ID="STR_Addons__d_map_adv_markers__Insert">
+		<Original>Save markers from clipboard</Original>
+		<Russian>Сохранить в профиле маркеры из буфера обмена</Russian>
+	</Key> 
+	<Key ID="STR_Addons__d_map_adv_markers__load">
+		<Original>load</Original>
+		<Russian>загрузить</Russian>
+	</Key> 
+	<Key ID="STR_Addons__d_map_adv_markers__delete">
+		<Original>delete</Original>
+		<Russian>удалить</Russian>
+	</Key>	
+	<Key ID="STR_Addons__d_map_adv_markers__clipboard">
+		<Original>to clipboard</Original>
+		<Russian>в буфер</Russian>
+	</Key> 
+  </Package>
+</Project>
