@@ -39,10 +39,12 @@ if (_targ != TFAR_currentUnit) then {
 
 			//if(_d > _tf_range) exitWith { false };
 			
-			{
+			if (!_tf_ok && (_mark select 2 == 1)) exitWith { true }; // Если метка в ДВ
+			
+			/*{
 				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
-			} forEach playableUnits; // +select side??
-
+			} forEach playableUnits; // +select side???? -> playableUnits select {(side _x == const?)}
+			*/
 
 			private _tf_isMatch= {
 				private _vol = _this select VOLUME_OFFSET;

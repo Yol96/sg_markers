@@ -22,7 +22,7 @@ if (d_restr_enable_freeze) then { // Если фриз закончился то
 		false
 	};
 	*/
-	if(!(call TFAR_fnc_haveLRRadio))  exitWith { // Нет ДВ для отправки маркеров - CBA(can_send_marker)
+	if(!(call TFAR_fnc_haveLRRadio) && !((_orig_chan == 3) || (_orig_chan == 2 && (_data select 3) == "SW")))  exitWith { // Нет ДВ для отправки маркеров - CBA(can_send_marker)
 		2344223 cutText [
 		localize "STR_Addons__d_map_adv_markers__send_not_allowed_noLR", 
 		"PLAIN", 0.2, true];

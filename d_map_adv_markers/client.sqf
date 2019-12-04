@@ -79,7 +79,12 @@ FUNC(CapplyMarkerVisibility) =
 		{
 			
 			if (d_restr_enable_freeze) then {
+				if (_mar select 12 == 1) then {
+				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
+				} else
+				{
 				_text = ((_mar select 11) select 0) + " " + _text;
+				};
 			} else {
 				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
 			};
@@ -127,7 +132,12 @@ FUNC(CapplyMarkerVisibility) =
 		{
 			
 			if (d_restr_enable_freeze) then {
+				if (_mar select 12 == 1) then {
+				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
+				} else
+				{
 				_text = ((_mar select 11) select 0) + " " + _text;
+				};
 			} else {
 				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
 			};
