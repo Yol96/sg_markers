@@ -11,3 +11,9 @@ amm_CMarkerTagDaytimeVisibility = 1;
 amm_CMarkerTagNameVisibility = 1;  
 amm_CModKeyForLineMarkers = 5;  
 amm_restrictMarkers = true;  
+
+
+# Changed classnames
+
+swt_kv -> swt_sw
+swt_dv -> swt_lr
