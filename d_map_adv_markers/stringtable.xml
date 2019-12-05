@@ -266,6 +266,14 @@
 	<Key ID="STR_Addons__d_map_adv_markers__clipboard">
 		<Original>to clipboard</Original>
 		<Russian>в буфер</Russian>
+	</Key>
+		<Key ID="STR_SG_M_SW">
+		<Original>SW Radio</Original>
+		<Russian>КВ рация</Russian>
+	</Key>	
+	<Key ID="STR_SG_M_LR">
+		<Original>LR Radio</Original>
+		<Russian>ДВ рация</Russian>
 	</Key> 
   </Package>
 </Project>

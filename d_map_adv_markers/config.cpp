@@ -14,6 +14,51 @@ class CfgPatches {
 	};
 };
 
+class CfgMarkers {
+	class swt_sw {
+		scope = 1;
+		swt_show = 1;
+		name = $STR_SG_M_SW;
+		icon = "\xx\addons\d_map_adv_markers\data\marker_sw_ca.paa";
+		markerClass = "draw";
+		color[] = {1, 0, 0, 1};
+		size = 29;
+		shadow = 1;
+	};
+	
+	class swt_lr : swt_sw {
+		name = $STR_SG_M_LR;
+		icon = "\xx\addons\d_map_adv_markers\data\marker_lr_ca.paa";
+		markerClass = "draw";
+	};
+	class Flag;
+	class o_unknown: Flag {scope = 2; shadow = 1;};
+	class o_inf: o_unknown {scope = 2; shadow = 1;};
+	class o_armor: o_unknown {scope = 2; shadow = 1;};
+	
+	class o_motor_inf: o_unknown {scope = 1; shadow = 1;};
+	class o_mech_inf: o_unknown {scope = 1; shadow = 1;};
+	class o_recon: o_unknown {scope = 1; shadow = 1;};
+	class o_air: o_unknown {scope = 1; shadow = 1;};
+	class o_plane: o_unknown {scope = 1; shadow = 1;};
+	class o_uav: o_unknown {scope = 1; shadow = 1;};
+	class o_naval: o_unknown {scope = 1; shadow = 1;};
+	class o_med: o_unknown {scope = 1; shadow = 1;};
+	class o_art: o_unknown {scope = 1; shadow = 1;};
+	class o_mortar: o_unknown {scope = 1; shadow = 1;};
+	class o_hq: o_unknown {scope = 1; shadow = 1;};
+	class o_support: o_unknown {scope = 1; shadow = 1;};
+	class o_maint: o_unknown {scope = 1; shadow = 1;};
+	class o_service: o_unknown {scope = 1; shadow = 1;};
+	class o_installation: o_unknown {scope = 1; shadow = 1;};
+	class o_antiair: o_unknown {scope = 1; shadow = 1;};
+	class o_Ordnance: o_unknown {scope = 1; shadow = 1;};
+	
+	class flag_NATO: Flag {scope = 1; shadow = 1;};
+	class RedCrystal: Flag {scope = 1; shadow = 1;};
+	class White: Flag {scope = 1; shadow = 1;};
+};
+
 
 class CfgFunctions
 {
