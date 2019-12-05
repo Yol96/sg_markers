@@ -15,5 +15,5 @@ amm_restrictMarkers = true;
 
 # Changed classnames
 
-swt_kv -> swt_sw
+swt_kv -> swt_sw  
 swt_dv -> swt_lr
