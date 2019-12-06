@@ -204,4 +204,4 @@ if (_targ != TFAR_currentUnit) then {
 	};
 } else {
 	true;
-}
+};
