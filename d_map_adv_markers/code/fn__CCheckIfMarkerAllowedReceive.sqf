@@ -7,9 +7,10 @@
 
 params ["_mark", "_targ"];
 
-if (_targ != TFAR_currentUnit) then {
+if (true) then { // (_targ != TFAR_currentUnit)
 
 	if (d_restr_enable_freeze) then { // Если фриз закончился то ... 
+		diag_log ("DEBUGSG_ALLOWED_RECEIVE_13LINE_CALLED");
 		private _data = _mark select 11;
 		private _tf_voice_volume_meters = (_data select 4) * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);		
 		private _tf_ok = false;
@@ -18,12 +19,14 @@ if (_targ != TFAR_currentUnit) then {
 		private _canSpeak = (vehicle _targ == _targ) || !(_targ call TFAR_fnc_vehicleIsIsolatedAndInside);
 
 		private _d = getPosASL (_vehicle) vectorDistance (getPosASL _targ);
-
+/*
 		if ((_d < _tf_voice_volume_meters && _canHear && _canSpeak) || (_vehicle == vehicle _targ) ) then { //Если дистанция меньше громкости голоса и не изолированы или в одной машинеы
 			_tf_ok = true;  //голос слышно
+			diag_log format ["DEBUGSG_ALLOWED_RECEIVE_LR_CALLED: %1", _tf_ok];
 		};
-		
-		if (!_tf_ok && ((_mark select 2) in [1, 2, 3]) ) then {
+		*/
+		if (((_mark select 2) in [1, 2, 3]) ) then {
+			diag_log ("DEBUGSG_ALLOWED_RECEIVE_26LINE_CALLED");
 			private _tf_chan = _data select 0;
 			private _tf_prot = _data select 1;
 			private _tf_range = (_data select 2) *  (TFAR_currentUnit getVariable ["tf_receivingDistanceMultiplicator", 1]) ;
@@ -39,7 +42,7 @@ if (_targ != TFAR_currentUnit) then {
 
 			//if(_d > _tf_range) exitWith { false };
 			
-			if (!_tf_ok && (_mark select 2 == 1)) exitWith { true }; // Если метка в ДВ
+			//if (!_tf_ok && (_mark select 2 == 1)) exitWith { true }; // Если метка в ДВ
 			
 			/*{
 				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
@@ -47,6 +50,7 @@ if (_targ != TFAR_currentUnit) then {
 			*/
 
 			private _tf_isMatch= {
+				diag_log ("DEBUGSG__tf_isMatch_CALLED");
 				private _vol = _this select VOLUME_OFFSET;
 
 				//Громкости рации         0 10 20   30   40   50 60 70 80 90 100
@@ -60,7 +64,9 @@ if (_targ != TFAR_currentUnit) then {
 					_altchan = (_this select 2) select (_this select 5);
 				};
 				
-				_tf_chan in [_chan,_altchan] and (_tf_prot == _prot) and _d < (_tf_range * _volRangeCoeff)
+				_tempvar = _tf_chan in [_chan,_altchan] and (_tf_prot == _prot) and _d < (_tf_range * _volRangeCoeff);
+				diag_log format ["DEBUGSG_ALLOWED_RECEIVE__tf_isMatch_CALLED: %1", str _tempvar];
+				_tempvar
 			};
 
  
@@ -68,6 +74,8 @@ if (_targ != TFAR_currentUnit) then {
 			if (TFAR_currentUnit call TFAR_fnc_canUseRadio) then {
 				private _lrs = (TFAR_currentUnit call TFAR_fnc_lrRadiosList) apply { _x call TFAR_fnc_getLrSettings };
 				private _sws = (TFAR_currentUnit call TFAR_fnc_radiosList) apply  { _x call TFAR_fnc_getSwSettings };
+				diag_log format ["DEBUGSG_ALLOWED_RECEIVE_LR_CALLED: %1", str _lrs];
+				diag_log format ["DEBUGSG_ALLOWED_RECEIVE_SW_CALLED: %1", str _sws];
 
 				{
 					if(_tf_ok) exitWith {};

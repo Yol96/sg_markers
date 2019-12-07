@@ -278,6 +278,7 @@ FUNC(IMOnKeyDown) =
 		};
 		if ([_val, _d] call FUNC(_CCheckIfMarkerAllowedSend)) then
 		{
+			diag_log format ["DEBUGSG_UI_MAP: %1", str _val];
 			_val call FUNC(CAddLineMarker_Temporary);
 					
 			[_val, player] remoteExec [QFUNC(SAddLineMarker),2];

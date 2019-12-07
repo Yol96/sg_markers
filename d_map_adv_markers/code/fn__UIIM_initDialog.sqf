@@ -117,7 +117,7 @@ _buttonCancel ctrlcommit 0;
 //--- ButtonOK
 _pos set [0,_posX + _posW / 2];
 _pos set [1,_posY + 4 * _posH + 2 * BORDER];
-_pos set [2,_posW / 2 - BORDER];
+_pos set [2,_posW / 2];
 _pos set [3,_posH];
 _buttonOk ctrlsetposition _pos;
 _buttonOk ctrlcommit 0;
