@@ -7,7 +7,7 @@
 
 params ["_mark", "_targ"];
 
-if (true) then { // (_targ != TFAR_currentUnit)
+if (_targ != TFAR_currentUnit) then {
 
 	if (d_restr_enable_freeze) then { // Если фриз закончился то ... 
 		diag_log ("DEBUGSG_ALLOWED_RECEIVE_13LINE_CALLED");
@@ -19,12 +19,12 @@ if (true) then { // (_targ != TFAR_currentUnit)
 		private _canSpeak = (vehicle _targ == _targ) || !(_targ call TFAR_fnc_vehicleIsIsolatedAndInside);
 
 		private _d = getPosASL (_vehicle) vectorDistance (getPosASL _targ);
-/*
+
 		if ((_d < _tf_voice_volume_meters && _canHear && _canSpeak) || (_vehicle == vehicle _targ) ) then { //Если дистанция меньше громкости голоса и не изолированы или в одной машинеы
 			_tf_ok = true;  //голос слышно
 			diag_log format ["DEBUGSG_ALLOWED_RECEIVE_LR_CALLED: %1", _tf_ok];
 		};
-		*/
+
 		if (((_mark select 2) in [1, 2, 3]) ) then {
 			diag_log ("DEBUGSG_ALLOWED_RECEIVE_26LINE_CALLED");
 			private _tf_chan = _data select 0;
@@ -42,7 +42,7 @@ if (true) then { // (_targ != TFAR_currentUnit)
 
 			//if(_d > _tf_range) exitWith { false };
 			
-			//if (!_tf_ok && (_mark select 2 == 1)) exitWith { true }; // Если метка в ДВ
+			//if (_tf_type == "LR") exitWith { true }; // Если метка в ДВ
 			
 			/*{
 				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
