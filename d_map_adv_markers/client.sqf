@@ -266,7 +266,6 @@ FUNC(CAddLineMarker) =
 	if (_check) then
 	{
 		_marker_allowed = [_mark, _spl] call FUNC(_CCheckIfMarkerAllowedReceive);
-		diag_log format ["DEBUGSG_CLIENT_RECEIVE: %1", str _marker_allowed];
 		
 		if (_marker_allowed) then
 		{
