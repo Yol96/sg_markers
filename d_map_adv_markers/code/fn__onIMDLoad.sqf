@@ -22,22 +22,13 @@ if (//isClass (configFile >> "CfgPatches" >> "tu_markers") &&
 		}
 		else
 		{
-			if(_this select 1 == 28) then
+			if(_this select 1 == 28 && _this select 3) then
 			{
-				if ((_this select 2) && !(_this select 3)) then {
-					[_this select 0] call c_persistent_markers_markerHandle;
+				[_this select 0] call c_persistent_markers_markerHandle;
 				
-					(findDisplay 54) closeDisplay 0;
+				(findDisplay 54) closeDisplay 0;
 				
-					true;
-				};
-				if ((_this select 3) && !(_this select 2)) then {
-					[_this select 0] call c_persistent_markers_markerHandle;
-				
-					(findDisplay 54) closeDisplay 0;
-				
-					true;
-				};
+				true;
 			}
 			else
 			{
