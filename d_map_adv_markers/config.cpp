@@ -16,25 +16,28 @@ class CfgPatches {
 
 class CfgMarkers {
 	class swt_sw {
-		scope = 1;
+		color[] = {0.9,0,0,1};
+		scope = 2;
 		swt_show = 1;
 		name = $STR_SG_M_SW;
 		icon = "\xx\addons\d_map_adv_markers\data\marker_sw_ca.paa";
 		markerClass = "draw";
-		color[] = {1, 0, 0, 1};
 		size = 29;
 		shadow = 1;
 	};
 	
 	class swt_lr : swt_sw {
+		color[] = {0.9,0,0,1};
+		scope = 1;
 		name = $STR_SG_M_LR;
 		icon = "\xx\addons\d_map_adv_markers\data\marker_lr_ca.paa";
 		markerClass = "draw";
 	};
 	class Flag;
-	class o_unknown: Flag {scope = 2; shadow = 1;};
-	class o_inf: o_unknown {scope = 2; shadow = 1;};
-	class o_armor: o_unknown {scope = 2; shadow = 1;};
+	class o_unknown: Flag {color[] = {0.9,0,0,1}; name = $STR_SG_M_GR; scope = 2; shadow = 1;};
+	class o_inf: o_unknown {color[] = {0.9,0,0,1}; scope = 2; shadow = 1;};
+	class o_armor: o_unknown {color[] = {0.9,0,0,1}; scope = 2; shadow = 1;};
+	class hd_dot: o_unknown {color[] = {0.9,0,0,1};};
 	
 	class o_motor_inf: o_unknown {scope = 1; shadow = 1;};
 	class o_mech_inf: o_unknown {scope = 1; shadow = 1;};
