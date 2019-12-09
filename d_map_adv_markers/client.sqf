@@ -80,10 +80,10 @@ FUNC(CapplyMarkerVisibility) =
 			
 			if (d_restr_enable_freeze) then {
 				if (_mar select 12 == 1) then {
-				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
+					_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
 				} else
 				{
-				_text = ((_mar select 11) select 0) + " " + _text;
+					_text = ((_mar select 11) select 0) + " " + _text;
 				};
 			} else {
 				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
@@ -133,10 +133,10 @@ FUNC(CapplyMarkerVisibility) =
 			
 			if (d_restr_enable_freeze) then {
 				if (_mar select 12 == 1) then {
-				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
+					_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
 				} else
 				{
-				_text = ((_mar select 11) select 0) + " " + _text;
+					_text = ((_mar select 11) select 0) + " " + _text;
 				};
 			} else {
 				_text = (GVAR(CMarkerChannelToChar) select MAR_CHAN(_mar)) + " " + _text;
@@ -266,6 +266,7 @@ FUNC(CAddLineMarker) =
 	if (_check) then
 	{
 		_marker_allowed = [_mark, _spl] call FUNC(_CCheckIfMarkerAllowedReceive);
+		diag_log format ["DEBUGSG_CLIENT_RECEIVE: %1", str _marker_allowed];
 		
 		if (_marker_allowed) then
 		{

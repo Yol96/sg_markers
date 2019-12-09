@@ -274,6 +274,10 @@
 	<Key ID="STR_SG_M_LR">
 		<Original>LR Radio</Original>
 		<Russian>ДВ рация</Russian>
+	</Key>
+		<Key ID="STR_SG_M_GR">
+		<Original>FireTeam</Original>
+		<Russian>Группа</Russian>
 	</Key> 
   </Package>
 </Project>
