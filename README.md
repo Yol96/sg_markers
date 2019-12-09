@@ -17,3 +17,13 @@ amm_restrictMarkers = true;
 
 swt_kv -> swt_sw  
 swt_dv -> swt_lr
+
+
+# Changed marker default properties
+
+Color:  
+o_unknown, o_inf, o_armor, hd_dot:  
+default -> color[] = {0.9,0,0,1}  
+
+Name:  
+hd_dot: "Флаг" -> "FireTeam"/"Группа"
