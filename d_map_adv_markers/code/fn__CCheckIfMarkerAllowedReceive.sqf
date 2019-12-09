@@ -24,6 +24,8 @@ if (_targ != TFAR_currentUnit) then {
 			_tf_ok = true;  //голос слышно
 			diag_log format ["DEBUGSG_ALLOWED_RECEIVE_LR_CALLED: %1", _tf_ok];
 		};
+		
+		if ((_mark select 12) == 1) exitWith { true }; // Если метка в ДВ
 
 		if (((_mark select 2) in [1, 2, 3]) ) then {
 			diag_log ("DEBUGSG_ALLOWED_RECEIVE_26LINE_CALLED");
@@ -40,9 +42,8 @@ if (_targ != TFAR_currentUnit) then {
 			//Если оглох, то "слышимость" меток понижается 
 			_d = _d * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);
 
-			//if(_d > _tf_range) exitWith { false };
-			
-			//if (_tf_type == "LR") exitWith { true }; // Если метка в ДВ
+			if(_d > _tf_range) exitWith { false };
+		
 			
 			/*{
 				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
