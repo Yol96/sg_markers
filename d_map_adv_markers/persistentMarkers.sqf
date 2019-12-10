@@ -14,7 +14,7 @@ c_persistent_markers_showMarkers = {
 			_pos = _data select 0;
 			_text = _data select 1;
 			createMarkerLocal [_name,_pos];
-			_name setMarkerTypeLocal "swt_lr"; // mil_marker
+			_name setMarkerTypeLocal "swt_sw"; // mil_marker
 			_name setMarkerSizeLocal [0.8, 0.8];
 			_name setMarkerTextLocal _text;
 			_name setMarkerColorLocal "ColorRed";
