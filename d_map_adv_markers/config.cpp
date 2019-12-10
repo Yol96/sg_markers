@@ -34,10 +34,9 @@ class CfgMarkers {
 		markerClass = "draw";
 	};
 	class Flag;
-	class o_unknown: Flag {name = $STR_SG_M_GR; scope = 2; shadow = 1;};
+	class o_unknown: Flag {color[] = {0.9,0,0,1}; name = $STR_SG_M_GR; scope = 2; shadow = 1;};
 	class o_inf: o_unknown {color[] = {0.9,0,0,1}; scope = 2; shadow = 1;};
 	class o_armor: o_unknown {color[] = {0.9,0,0,1}; scope = 2; shadow = 1;};
-	class hd_dot: o_unknown {color[] = {0.9,0,0,1};};
 	
 	class o_motor_inf: o_unknown {scope = 1; shadow = 1;};
 	class o_mech_inf: o_unknown {scope = 1; shadow = 1;};
