@@ -40,6 +40,13 @@
 			d_restr_enable_freeze = true;
 			["tu_platform_game_started", GVAR(game_startedEh)] call CBA_fnc_removeEventHandler;
 		}] call CBA_fnc_addEventHandler;
+		
+		["created", { 
+			params ["_newMarker"];
+			if (markerShape(_newMarker) == "POLYLINE") then {
+				deleteMarker _newMarker;
+			};
+		}] call CBA_fnc_addMarkerEventHandler;
 
 		waituntil {sleep 3.15; !(isNil "a3a_var_started") or !(isnil "Serp_warbegins")};
 		if (!isNil "a3a_var_started") then {
