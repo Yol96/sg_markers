@@ -228,9 +228,10 @@ FUNC(UIKeyDown) =
 		if (count GVAR(UIPoints) > 1) then
 		{
 			private _chan = GVAR(UICurrentChannel);
-			if (_chan<4 && time>0 && d_restr_enable_freeze) then {
+			/*if (_chan<4 && time>0 && d_restr_enable_freeze) then {
 				_chan = [4,5] select (vehicle player == player);
 			};
+			*/
 
 			private _orig_chan = _chan;
 			if (_send_to_channel >= 0) then
