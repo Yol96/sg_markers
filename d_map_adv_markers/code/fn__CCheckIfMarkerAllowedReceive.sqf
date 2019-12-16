@@ -14,6 +14,7 @@ if (_targ != TFAR_currentUnit) then {
 		private _tf_voice_volume_meters = (_data select 4) * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);		
 		private _tf_ok = false;
 		private _vehicle = vehicle TFAR_currentUnit;
+		private _group = group TFAR_currentUnit;
 		private _canHear = (_vehicle == TFAR_currentUnit) || !(TFAR_currentUnit call TFAR_fnc_vehicleIsIsolatedAndInside);
 		private _canSpeak = (vehicle _targ == _targ) || !(_targ call TFAR_fnc_vehicleIsIsolatedAndInside);
 
@@ -24,6 +25,10 @@ if (_targ != TFAR_currentUnit) then {
 		};
 		
 		if ((_mark select 12) == 1) exitWith { true }; // Если метка в ДВ
+		
+		if (_group == group _targ) then {
+			_tf_ok = true;
+		};
 
 		if (((_mark select 2) in [1, 2, 3]) ) then {
 			private _tf_chan = _data select 0;
@@ -40,12 +45,6 @@ if (_targ != TFAR_currentUnit) then {
 			_d = _d * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);
 
 			if(_d > _tf_range) exitWith { false };
-		
-			
-			/*{
-				if (group TFAR_currentUnit == group _x) exitWith { true };	// Если группа юнита совпадает
-			} forEach playableUnits; // +select side???? -> playableUnits select {(side _x == const?)}
-			*/
 
 			private _tf_isMatch= {
 				private _vol = _this select VOLUME_OFFSET;
