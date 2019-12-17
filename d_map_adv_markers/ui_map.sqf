@@ -255,7 +255,8 @@ FUNC(UIKeyDown) =
 				_val = [-1, -1, _chan, _chan call FUNC(UIgetPlayerChanData),
 					name player, "", GVAR(UILineMarkerChanToType) select _chan,
 					GVAR(UIMarkerColor), GVAR(UIMarkerThick) * _scale, GVAR(UIPoints),
-					daytime, _d, _orig_chan];
+					daytime, _d, _orig_chan, player];
+					diag_log format["%1        %2", _val, _val select 13];
 			};	
 			if ([_val, _d] call FUNC(_CCheckIfMarkerAllowedSend)) then
 			{

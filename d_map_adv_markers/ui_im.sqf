@@ -274,7 +274,8 @@ FUNC(IMOnKeyDown) =
 			_val =	[ -1, -1, _chan, _chan call FUNC(UIgetPlayerChanData),
 				name player, _text, GVAR(UIMarkerType),
 				GVAR(UIMarkerColor), GVAR(UIMarkerThick),
-				[GVAR(UIMouseMapPosDblClick)], daytime ,_d, _orig_chan];
+				[GVAR(UIMouseMapPosDblClick)], daytime ,_d, _orig_chan, player];
+				diag_log format["%1        %2", _val, _val select 13];
 		};
 		if ([_val, _d] call FUNC(_CCheckIfMarkerAllowedSend)) then
 		{

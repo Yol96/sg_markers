@@ -11,6 +11,7 @@ if (_targ != TFAR_currentUnit) then {
 
 	if (d_restr_enable_freeze) then { // Если фриз закончился то ... 
 		private _data = _mark select 11;
+		private _group  =  group (_mark select 13);
 		private _tf_voice_volume_meters = (_data select 4) * (TFAR_currentUnit getVariable ["tf_globalVolume",1]);		
 		private _tf_ok = false;
 		private _vehicle = vehicle TFAR_currentUnit;
@@ -24,6 +25,7 @@ if (_targ != TFAR_currentUnit) then {
 		};
 		
 		if ((_mark select 12) == 1) exitWith { true }; // Если метка в ДВ
+		if (_group == (group TFAR_currentUnit)) exitWith { true }; // Если юниты в одной группе
 
 		if (((_mark select 2) in [1, 2, 3]) ) then {
 			private _tf_chan = _data select 0;
