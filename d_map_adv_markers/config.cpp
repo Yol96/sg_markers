@@ -97,8 +97,8 @@ class CfgFunctions
 			class deleteSavedMarkers {recompile = RECOMPILE;};
 			class copyMarkersToClipboard {recompile = RECOMPILE;};
 			class insertMarkersFromClipboard {recompile = RECOMPILE;};
-			class addSavedMarkersToDiary {recompile = RECOMPILE;};
-			
+			class addSavedMarkersToDiary {recompile = RECOMPILE;};	
+			class frequencyMarkers { postInit=1;};			
 		};
 	};
 };
