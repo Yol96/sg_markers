@@ -27,7 +27,7 @@ for "_i" from 0 to ((count _cfgt) - 1) do
 { 
 	if ((configName (_cfgt select _i)) in _whiteList) then 
 	{ 
-		_markers set [count _markers, configName (_cfgt select _i)]; 
+		GVAR(UIMarkerTypes) set [count GVAR(UIMarkerTypes), configName (_cfgt select _i)]; 
 	}; 
 };
 GVAR(UIMarkerTypeID) = 0;
