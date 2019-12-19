@@ -1,28 +1,11 @@
 disableSerialization;
-
-
 #include "main.hpp"
 #include "settings.hpp"
-
-
 GVAR(UICurrentChannel) = CHAN_GROUP;
-
-
-
-
-
-
-
-
-
-
-
-
-
 GVAR(UIMarkerTypes) = [];
 
 _cfgt = configFile >> "CfgMarkers"; 
-_whiteList = ["hd_dot", "hd_objective", "hd_flag", "hd_destroy", "hd_end", "hd_pickup", "hd_warning", "hd_unknown", "o_unknown", "o_inf", "swt_sw","sg_complete","o_armor"]; // Список доступных маркеров
+_whiteList = ["hd_dot", "hd_objective", "hd_flag", "hd_destroy", "hd_end","hd_start", "hd_pickup", "hd_warning", "hd_unknown", "o_unknown", "o_inf", "swt_sw","sg_complete","o_armor"]; // Список доступных маркеров
 for "_i" from 0 to ((count _cfgt) - 1) do 
 { 
 	if ((configName (_cfgt select _i)) in _whiteList) then 
@@ -32,13 +15,6 @@ for "_i" from 0 to ((count _cfgt) - 1) do
 };
 GVAR(UIMarkerTypeID) = 0;
 GVAR(UIMarkerType) = GVAR(UIMarkerTypes) select GVAR(UIMarkerTypeID);
-
-
-
-
-
-
-
 GVAR(UIMarkerColors) = CLIENT_MARKER_COLOR_AR;
 /*_cfgt = configFile >> "CfgMarkerColors";
 for "_i" from 0 to ((count _cfgt) - 1) do
@@ -48,49 +24,11 @@ for "_i" from 0 to ((count _cfgt) - 1) do
 
 GVAR(UIMarkerColorID) = 0;
 GVAR(UIMarkerColor) = GVAR(UIMarkerColors) select GVAR(UIMarkerColorID);
-
-
-
-
-
 GVAR(UIMarkerThicks) = CLIENT_MARKER_THICKNESS_AR;
 GVAR(UIMarkerThickID) = CLIENT_MARKER_DEFAULT_THICKNESS;
 GVAR(UIMarkerThick) = GVAR(UIMarkerThicks) select GVAR(UIMarkerThickID);
-
-
-
-
-
-
-
-
-
-
-
-
-
 GVAR(UIMouseMapPosDblClick) = [0, 0];
-
-
-
-
-
-
-
-
-
-
-
-
-
 // update current chat channel (see fn__onEachFrameBody.sqf)
-
-
-
-
-
-
-
 FUNC(UIgetPlayerChanData) =
 {
 	_retval = objNull;
@@ -105,18 +43,7 @@ FUNC(UIgetPlayerChanData) =
 	_retval;
 };
 
-
-
-
-
-
-
-
-
 GVAR(UIHotkeysLogic) = "Logic" createVehicleLocal [-10000,-10000,0];
-
-
-
 FUNC(UIKeyCombToString) =
 {
 	private _shift = if (_this select 2) then {1} else {0};
@@ -124,14 +51,7 @@ FUNC(UIKeyCombToString) =
 	private _alt = if (_this select 4) then {1} else {0};
 	format["%1_%2%3%4", _this select 1, _shift, _ctrl, _alt];	
 };
-
-
-
 #define CHECK_HOTKEY(x) ([_this select 1, _this select 2, _this select 3, _this select 4] isEqualTo (x))
-
-
-
-
 FUNC(UICheckHotkey_relaxed) =
 {
 	params ["_ehd", "_hk"];
