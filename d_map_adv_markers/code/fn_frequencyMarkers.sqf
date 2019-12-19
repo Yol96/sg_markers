@@ -10,7 +10,7 @@ private _radio_marker_pos = getMarkerPos "tu_radios";
 if ((_radio_marker_pos select 0) == 0) then {
 
 	private _default_positions = [
-		["Altis",[309,105]],
+		["Altis",[30900,10500]],
 		["Chernarus",[15400,10500]],
 		["Chernarus_Winter",[15400,10500]],
 		["Bozcaada",[20900,11900]],
