@@ -5,7 +5,7 @@ GVAR(UICurrentChannel) = CHAN_GROUP;
 GVAR(UIMarkerTypes) = [];
 
 _cfgt = configFile >> "CfgMarkers"; 
-_whiteList = ["hd_dot", "hd_objective", "hd_flag", "hd_destroy", "hd_end","hd_start", "hd_pickup", "hd_warning", "hd_unknown", "o_unknown", "o_inf", "swt_sw","sg_complete","o_armor"]; // Список доступных маркеров
+_whiteList = ["hd_dot", "hd_objective", "hd_flag", "hd_destroy", "hd_end","hd_start", "hd_pickup", "hd_warning", "hd_unknown", "o_unknown", "o_inf","sg_complete","o_armor"]; // Список доступных маркеров
 for "_i" from 0 to ((count _cfgt) - 1) do 
 { 
 	if ((configName (_cfgt select _i)) in _whiteList) then 

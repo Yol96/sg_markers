@@ -14,7 +14,7 @@ c_persistent_markers_showMarkers = {
 			_pos = _data select 0;
 			_text = _data select 1;
 			_playerName = _data select 2;
-			_flag = _text select [0,2];
+			_flag = toUpper(_text select [0,2]);
 			_text = _text select [2, count _text];
 			_text = _playerName + ' ' + _text;
 			createMarkerLocal [_name,_pos];
