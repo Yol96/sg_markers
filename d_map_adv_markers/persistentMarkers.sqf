@@ -13,8 +13,17 @@ c_persistent_markers_showMarkers = {
 		if ((markerType _name) == '') then {
 			_pos = _data select 0;
 			_text = _data select 1;
+			_playerName = _data select 2;
+			_flag = _text select [0,2];
+			_text = _text select [2, count _text];
+			_text = _playerName + ' ' + _text;
 			createMarkerLocal [_name,_pos];
-			_name setMarkerTypeLocal "swt_sw"; // mil_marker
+			_markerTypeLrFlags = ["LR", "DV"];
+			if (_flag in _markerTypeLrFlags) then {
+				_name setMarkerTypeLocal "swt_lr"; // mil_marker
+			} else {
+				_name setMarkerTypeLocal "swt_sw";
+			};
 			_name setMarkerSizeLocal [0.8, 0.8];
 			_name setMarkerTextLocal _text;
 			_name setMarkerColorLocal "ColorRed";
@@ -29,7 +38,8 @@ c_persistent_markers_showMarkers = {
 
 c_persistent_markers_markerHandle = {
 	_control = ((findDisplay 54) displayCtrl 101);
-	_text = (name player) + ' ' + (ctrlText _control);
+	_name = (name player);
+	_text = (ctrlText _control);
 	_control ctrlSetText '';
 	_ctrlPos = ctrlPosition _control;
 
@@ -42,7 +52,7 @@ c_persistent_markers_markerHandle = {
 		_i = _i + 1;
 	};
 
-	markerLogic setVariable [format ['pers_marker%1%2',_side,_i],[_pos,_text],true];
+	markerLogic setVariable [format ['pers_marker%1%2',_side,_i],[_pos,_text,_name],true];
 	markerLogic setVariable [format ['pers_marker_count%1',_side],_i,true];
 	[] call c_persistent_markers_showMarkers;
 	c_persistent_markers_update = true;publicVariable "c_persistent_markers_update";
