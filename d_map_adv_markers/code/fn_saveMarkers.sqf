@@ -1,6 +1,6 @@
 #include "main.hpp"
 
-if((isServer ||  player == ( (playableUnits select { side _x == side player }) select 0 ))  && time == 0) then {//только на локальном сервере
+if(isServer ||  player == ( (playableUnits select { side _x == side player }) select 0 )) then {//только на локальном сервере
 	private _ms = (call FUNC(GetAllMarkers)) apply {
 		_x params ["", "", "_chan", "", "_player", "_text", "_type", "_color", "_thick", "_coords", "", "", "_orig_chan"];
 		if(!isnil {_orig_chan}) then {
