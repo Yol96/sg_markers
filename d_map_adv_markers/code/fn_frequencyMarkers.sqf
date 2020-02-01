@@ -54,7 +54,7 @@ if ((_radio_marker_pos select 0) == 0) then {
 		};
 		private _plus = if (_shift > 0) then {"+"} else {""};
 		private _txt = format ["%1 %2: %3 %4%5",_callsign, _squad_name,_fq,_plus,_shift];
-		(_frequencies select _side_index) pushBack [_radio_marker_pos,_txt];
+		(_frequencies select _side_index) pushBack [_radio_marker_pos,_txt, _squad_name];
 		_radio_marker_pos = [_radio_marker_pos select 0, (_radio_marker_pos select 1) - 200];
 	};
 } forEach allGroups;
