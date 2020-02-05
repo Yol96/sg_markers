@@ -251,7 +251,7 @@ FUNC(IMOnKeyDown) =
 	
 	
 	// enter --- place the marker
-	if (((_this select 1) in [28, 156]) || _send_to_channel >= 0) then
+	if (((_this select 1) in [28, 156]) || (_send_to_channel >= 0) && (alive player)) then
 	{
 		private _chan = [] call FUNC(_CGetIMDChannel);
 		private _orig_chan = _chan;
